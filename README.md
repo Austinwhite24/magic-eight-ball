@@ -1,4 +1,4 @@
-This is my Magic 8 Ball website that I created, used to type in any question you might have and you can ask the magic 8 ball and it will give you a random response.
+This is my Magic 8 Ball website that I created, Its used to type in any question you might have and you can ask the magic 8 ball and it will give you a random response.
 
 
 
