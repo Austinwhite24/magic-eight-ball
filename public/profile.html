@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html id="profilePage" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Profile page</title>
+</head>
+<h1 id="proTitle">Profile page</h1>
+<h2>History</h2>
+
+<div id="righButtontLinks">
+    <div> <button class="rightBtn"id="homeBtn">Home</button> </div>
+    <div> <button class ="rightBtn"id="profileBtn">Your Profile</button> <div>
+            
+    <div><button class ="rightBtn" id="loginSignUpBtn">Login / Sign Up</button> <div> 
+        </div>
+<!-- <main class="boxAnswers">
+    <div id="box1"> Box one </div>
+    <div> box two</div>
+</main> -->
+
+
+
+<script>
+    document.getElementById("deleteRes").onclick = function () {
+        axios.delete("http://localhost:4004/api/delete")
+    }
+</script>
+
+<body>
+<div id="allBoxes">
+    <section class="groupOfBoxes" >
+        <!-- <div class="boxAnswers" id="box1"> Box one </div>
+        <div class="boxAnswers" id="box2"> box two</div>
+        <div class="boxAnswers" id="box3"> box three</div>
+        <div class="boxAnswers" id="box4"> box four</div>
+        <div class="boxAnswers" id="box5"> box five</div>
+        <div class="boxAnswers" id="box6"> box six</div>
+        <div class="boxAnswers" id="box7"> box seven</div>
+        <div class="boxAnswers" id="box8"> box eight</div>
+        <div class="boxAnswers" id="box9"> box nine</div> -->
+
+    </section>
+
+<script>
+    window.onload=function() {
+        axios.get("http://localhost:4004/api/profile")
+        .then(res => {
+            for (let i=0; i < res.data.length; i ++){
+                const responseAnswers = document.createElement("div")
+                responseAnswers.setAttribute("class", "boxAnswers")
+                responseAnswers.innerHTML=`<span>${res.data[i]}</span>`
+                document.querySelector(".groupOfBoxes").appendChild(responseAnswers)
+            }})
+    }
+
+</script>
+
+</div>
+    
+    
+
+    <!-- <nav class="rightLinks">
+        <a href="http://127.0.0.1:5500/public/main.html">HOME</a>
+        <br>
+        <a href="http://127.0.0.1:5500/public/profile.html" target="_blank">YOUR PROFILE </a>
+        <br>
+        <a href="http://127.0.0.1:5500/signUp/signUp.html">Login / Sign Up</a>
+    </nav> -->
+
+
+
+    
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./main.js"></script>
+</html>
