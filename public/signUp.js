@@ -11,11 +11,6 @@ $(window).on("hashchange", function () {
 });
 $(window).trigger("hashchange");
 
-// const change = (e) => {
-// 	e.preventDefault()
-// 			window.location.href="./profile.html"
-
-// }
 
 function validateLoginForm() {
 	var name = document.getElementById("logName").value;
@@ -54,7 +49,7 @@ function validateSignupForm() {
 		return false;
 	}
 	else {
-		// change()
+		
 		window.location.href="./profile.html"
 			alert("Successfully signed up");
 		

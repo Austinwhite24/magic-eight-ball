@@ -1,6 +1,6 @@
 const express = require('express')
 const cors = require('cors')
-const eightBallAnswers = require ('./db.json')
+// const eightBallAnswers = require ('./db.json')
 // const axios = require('axios')
 
 const app = express()

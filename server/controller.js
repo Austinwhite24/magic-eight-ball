@@ -1,7 +1,6 @@
 const database = []
 
 
-
 module.exports = {
     getFortune: (req, res) => {
        const fortunes = ["It is certain",
@@ -31,7 +30,7 @@ module.exports = {
        'Very doubtful'
        ];
      
-       // choose random compliment
+       
        let randomIndex = Math.floor(Math.random() * fortunes.length);
        let randomFortune = fortunes[randomIndex];
      
